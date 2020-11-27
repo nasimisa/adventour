@@ -91,7 +91,7 @@ main section div {
 body {
   background: url(./images/hero-blur.jpg) no-repeat center center;
   background-size: cover;
-  height: 624px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
