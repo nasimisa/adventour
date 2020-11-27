@@ -1,0 +1,518 @@
+/*********** BASE STYLES **************/
+
+/* color palette:
+#e78200 - orange
+#6d1d8f - purple
+#cf1717 - red
+ */
+
+/* remove scrollbar for all browsers */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 100%;
+  border-radius: 5px;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-transform: uppercase;
+  background: #6d1d8f;
+  color: #fff;
+  text-align: center;
+  padding: 2px;
+}
+
+h4 {
+  background: #cf1717;
+  color: #fff;
+  width: max-content;
+  padding: 3px;
+  margin-top: 5px;
+}
+
+section p {
+  text-align: justify;
+  word-spacing: 1px;
+}
+
+section img {
+  margin-top: 15px;
+}
+
+.book-now,
+form button {
+  color: #e78200;
+  background: #fff;
+  border: 1px solid #e78200;
+  text-transform: capitalize;
+  transition: all 0.3s linear;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.book-now:hover,
+form button:hover {
+  color: #fff;
+  background: #e78200;
+}
+
+main section div {
+  margin-bottom: 20px;
+}
+
+/*********** BACKGROUND STYLES **************/
+
+body {
+  background: url(./images/hero-blur.jpg) no-repeat center center;
+  background-size: cover;
+  height: 624px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inside-phone {
+  width: 350px;
+  height: 600px;
+  border: 5px solid #000;
+  border-radius: 30px;
+  overflow: auto;
+  scrollbar-width: none;
+  background: #fff;
+}
+
+/*********** HEADER STYLES **************/
+
+header {
+  background: url(./images/hero.jpg) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  border-radius: 0;
+}
+
+#logo {
+  width: 150px;
+}
+
+/* navbar */
+nav {
+  background: #fff;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.nav-toggle {
+  transition: all 0.3s linear;
+  position: relative;
+  right: 15px;
+  width: 34px;
+  height: 20px;
+  background: transparent;
+  border: 0;
+}
+
+.nav-toggle:focus {
+  outline: 0 !important;
+}
+
+/* toggle button with 3 line bar (3 spans) which transforms to X on click */
+.nav-toggle span {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: #fb7900;
+  border-radius: 2px;
+  transform: translateY(-50%);
+  transition: 0.2s ease;
+}
+
+.nav-toggle span:nth-child(2).transform {
+  opacity: 0;
+  height: 3px;
+}
+
+.nav-toggle span:first-child {
+  top: 0;
+}
+
+.nav-toggle span:first-child.transform {
+  top: 50%;
+  transform: rotate(-135deg);
+  height: 3px;
+}
+
+.nav-toggle span:last-child {
+  top: 100%;
+}
+
+.nav-toggle span:last-child.transform {
+  top: 50%;
+  transform: rotate(135deg);
+  height: 3px;
+}
+
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+  display: flex;
+  justify-content: center;
+}
+
+.show-links {
+  height: 205px;
+}
+
+.links {
+  padding-left: 5px;
+  width: 300px;
+}
+
+.nav-item {
+  background: #fff;
+  border: 1px solid #fb7900;
+  margin-bottom: 1px;
+}
+
+.nav-item:hover {
+  background: #fb7900;
+}
+
+.nav-link {
+  color: #fb7900;
+  font-size: 21px;
+  transition: all 0.3s linear;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  transition: all 0.3s linear;
+}
+
+/* banner */
+.banner {
+  text-align: center;
+  padding-left: 5px;
+}
+
+.big-adventure h1 {
+  text-transform: uppercase;
+  margin: 20px;
+  font-size: 50px;
+  color: rgba(236, 236, 236, 0.5);
+}
+
+.banner-content h2 {
+  color: #e78200;
+  text-align: left;
+  background: transparent;
+  text-transform: none;
+}
+
+.banner-content p {
+  font-size: 12px;
+  width: 160px;
+  text-align: justify;
+}
+
+.banner-content a {
+  color: #fff;
+  border: 1px solid #fff;
+  width: 130px;
+  margin: 5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all 0.3s linear;
+  padding: 7px 0;
+  line-height: 1;
+  display: block;
+}
+
+.banner-content a:hover {
+  background: #e78200;
+}
+
+.social-media {
+  margin: 15px auto;
+}
+
+.social-media a {
+  color: #fff;
+}
+
+.underline {
+  display: inline-block;
+  border-top: 1px solid #fff;
+  width: 100px;
+}
+
+/*********** CONTACT AND FOOTER STYLES **************/
+
+#contact {
+  margin-top: 30px;
+}
+
+.contact-us {
+  margin-top: 15px;
+}
+
+.contact-us i {
+  color: #6d1d8f;
+}
+
+.contact-us a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+label,
+form p,
+form button,
+footer {
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+footer {
+  color: #fff;
+  background: #6d1d8f;
+  border-radius: 0;
+  padding: 10px;
+  padding-bottom: 1px;
+}
+
+.top-link {
+  font-size: 20px;
+  position: fixed;
+  bottom: 100px;
+  right: 70px;
+  background: #cf1717;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 100%;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.top-link:hover {
+  color: #fff;
+}
+
+.show-toplink {
+  visibility: visible;
+  z-index: 100;
+}
+
+/*********** MEDIA QUERIES **************/
+
+/* medium screen size */
+@media (min-width: 768px) {
+  header {
+    margin-bottom: 10px;
+    height: 450px;
+  }
+
+  nav {
+    background: transparent;
+  }
+
+  .inside-phone {
+    width: auto;
+    height: 450px;
+  }
+
+  .links {
+    width: 100%;
+  }
+
+  .banner {
+    text-align: initial;
+    display: flex;
+  }
+
+  .big-adventure h1 {
+    margin-top: 0px;
+    width: 100px;
+    position: relative;
+    left: 300px;
+  }
+
+  .banner-content {
+    position: relative;
+    right: 130px;
+  }
+
+  .banner-content a {
+    text-align: center;
+  }
+
+  .social-media {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    left: 130px;
+    transition: all 0.3s linear;
+    margin-top: 30px;
+  }
+
+  .social-media i {
+    margin: 3px;
+    position: relative;
+    bottom: 40px;
+    right: 22px;
+  }
+
+  .underline {
+    width: 60px;
+    transform: rotate(90deg);
+    position: relative;
+    right: 40px;
+    bottom: 20px;
+    margin-bottom: 60px;
+    margin-top: 10px;
+    border-color: #e78200;
+  }
+
+  main {
+    margin: 0 auto;
+  }
+
+  section img {
+    width: 550px;
+  }
+
+  #survey-form {
+    margin-left: 0;
+  }
+}
+
+/* large screen size */
+@media (min-width: 992px) {
+  header {
+    height: 550px;
+  }
+
+  .inside-phone {
+    height: 550px;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    height: 100px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .links-container {
+    height: auto;
+  }
+
+  .links {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .nav-link {
+    padding: 3px;
+  }
+
+  .social-media {
+    display: flex;
+    flex-flow: row;
+    position: relative;
+    left: 130px;
+    transition: all 0.3s linear;
+    margin-top: 30px;
+  }
+
+  .social-media i {
+    margin: 3px;
+    position: relative;
+    bottom: 100px;
+    right: 40px;
+  }
+
+  .underline {
+    transform: none;
+    position: relative;
+    bottom: 100px;
+    display: inline-block;
+    border-top: 1px solid #fff;
+    width: 100px;
+    border-radius: 0;
+  }
+
+  .big-adventure h1 {
+    position: relative;
+    left: 450px;
+    font-size: 70px;
+  }
+}
+
+/* mobile screen size adjustments */
+@media (max-width: 768px) {
+  header {
+    height: 590px;
+  }
+
+  main section {
+    margin-top: 20px;
+  }
+}
